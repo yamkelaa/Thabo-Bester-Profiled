@@ -1,0 +1,1274 @@
+/*FONT IMPORTS*/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mandali&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/*CSS RESET*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*HTML STYES*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*VARIABLES*/
+
+:root {
+    --MAIN-FONT: 'Raleway', sans-serif;
+    --MAIN-FONT-SIZE: 0.9rem;
+    --IMAGE-ONE: url(../images/background-main.png);
+    --IMAGE-TWO: url(../images/background-main-two.png);
+    --IMAGE-THREE: url(../images/background-main-three.png);
+}
+
+/*STYLES FOR THE ENTIRE WEBSITE*/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    font-family: var(--MAIN-FONT);
+}
+
+/*--------------------------------STYLES FOR THE FIRST PAGE----------------------------------------------*/
+/*LAYOUT THE CONTENT FOR THE PAGE*/
+#page-one {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 450px;
+}
+
+/*STYLE THE HEADER*/
+header {
+    background-color: #000;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    font-family: var(--MAIN-FONT);
+    position: relative;
+    font-size: var(--MAIN-FONT-SIZE);
+}
+
+/*STYLE THE LOGO*/
+.logo {
+    color: white;
+    padding: 0.35rem;
+    font-size: var(--MAIN-FONT-SIZE);
+
+}
+
+/*STYLE THE NAV BAR ON THE LEFT OF THE HEADER*/
+nav{
+    justify-self: end; 
+    position: absolute;
+    right: 0.35rem;
+    width: auto;
+    color: white;
+    
+}
+
+/*STYLE THE UNORDERED LIST IN THE NAV*/
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+/*STYLE THE ANCHORS WITHIN THE NAV*/
+nav a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+/*THE TEXT GET IN TOUCH SHOULD BE BLACK*/
+.get-in-touch{
+    color: #000;
+}
+
+.hamburger-menu{
+    background-color: white;
+    opacity: 1;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top:100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    display: none;
+    
+}
+
+.hamburger-menu.isVisible{
+    display: flex;
+}
+
+.hamburger-menu li{
+    list-style-type: none;
+    
+}
+
+.hamburger-menu li a{
+    list-style-type: none;
+    text-decoration: none;
+    color: #555;
+    font-weight: 800;
+}
+
+.hamburger-menu li a:hover{
+    font-size: 0.95rem;
+}
+
+
+
+
+
+
+/*ALL THE LIST-ITEMS IN THE UNORDERD LIST IN THE NAV*/
+nav ul li, i {
+    list-style-type: none;
+    display:inline-block;
+    background-color: rgb(61, 59, 59);
+    padding: 0.45rem 0.25rem;
+    border-radius: 5px;
+    
+}
+
+/*THE LAST LIST ITEM IN THE UNORDED LIST IN THE NAV HOULD HAVE A BACKROUND COLOR OF YELLOW*/
+nav ul li:last-child{
+    background-color: #ffcb05;
+    color: #000;
+}
+
+/*STYLE THE CONTAINER THAT WILL STORE PAGE ONES MAIN SECTION */
+.page-one-main-container {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    box-shadow: 5px 5px 5px white;
+}
+
+/*ARRANGE ALL THE ELEMENTS ON PAGE ONE'S MAIN SECTION AND GIVE THE MAIN SECTION A BACKGROUND IMAGE AND ANIMATION VALUE*/
+.page-one-main{
+    height: 95%;
+    width: 95%;
+    background-color: #000;
+    border-radius: 15px;
+    background-image: url(../images/background-main.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    animation: imageSwitch 15s linear ;
+}
+
+/*STYLE THE TEXT CONTNENT CONTAINER*/
+.page-one-main .text-content {
+    height: 40%;
+    width: 80%;
+    position: absolute;
+    bottom: 1.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    font-size: 1.7rem;
+}
+/*STYLE ALL THE PARAGRAPH WITHIN THE TEXT CONTENT CONTAINER*/
+.text-content p {
+    word-spacing: 0.25rem;
+}
+
+/*THE TEXT PROFILED SHOULD BE RED*/
+.profiled {
+    color: red;
+
+}
+/*STYLE THE ARTICLE*/
+.text-content article {
+    font-size: var(--MAIN-FONT-SIZE);
+    color: rgb(195, 195, 195);
+}
+
+/*STYLE AND PLACE THE DROP-DOWN MENU AND MAKE THE DISPLAY NONE INITIALLY*/
+.drop-down-menu{
+    height: 50%;
+    width: 9%;
+    position: absolute;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+/*STYLE THE VERTICAL BARS IN THE DROP-DOWN MENU*/
+.drop-down-menu div {
+    height: 15%;
+    width: 98%;
+    background-color: #ffff;
+    border-radius: 20px;
+}
+
+/*PLACE THE SLIDE-SHOW AND ARRANGE ALL THE ELEMENTS INSIDE IT*/
+.slide-show-page-one {
+    width: 100%;
+    height: 5%;
+    position: absolute;
+    bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+/*STYLE ALL THE SLIDE SHOW CRICLES*/
+.slide-show > div {
+    height: 12px;
+    width: 12px;
+    background-color: rgba(255, 255, 255, 0.081);
+    border: 1px solid white;
+    border-radius: 50%;
+}
+/*APPLY ANIMATIONS TO ALL THE SLIDE SHOW CIRCLES*/
+/*THE FIRST SLIDE-SHOW CIRCLE SHOULD BE FILLED AT FIRST, AS THE FIRST IMAGE WILL DISPLAY AT FIRST BY DEFAULT*/
+.slide-show div:first-child {
+    background-color: rgba(255, 255, 255, 1);
+    animation: slideOne 13s linear ;
+}
+
+.slide-show div:nth-child(2){
+    animation: slideTwo 13s linear ;
+    
+}
+.slide-show div:nth-child(3){
+    animation: slideThree 13s linear ;
+}
+
+
+@keyframes slideOne {
+    33%{
+        background-color: rgba(255, 255, 255, 0.081);
+    }
+    66%{
+        background-color: rgba(255, 255, 255, 0.081);
+    }
+    100%{
+        background-color: rgba(255, 255, 255, 1);
+    }
+    
+}
+@keyframes slideTwo {
+    33%{
+        background-color: rgba(255, 255, 255, 1);
+    }
+    66%{
+        background-color: rgba(255, 255, 255, 0.081);
+    }
+    100%{
+        background-color: rgba(255, 255, 255, 0.081);
+    }
+    
+}
+@keyframes slideThree {
+    33%{
+        background-color: rgba(255, 255, 255, 0.081);
+    }
+    66%{
+        background-color: rgba(255, 255, 255, 1);
+    }
+    100%{
+        background-color: rgba(255, 255, 255, 0.081);
+    }
+    
+}
+
+
+
+
+/*ANIMATIONS*/
+@keyframes imageSwitch {
+
+    33% {
+        background-image: var(--IMAGE-TWO);
+        background-position: center;
+        background-size: cover;
+    }
+
+    66%{
+        background-image: var(--IMAGE-THREE);
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    100%{
+        background-image: var(--IMAGE-ONE);
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+
+
+
+/* -----------------------------------------END OF PAGE ONE-----------------------------------------------------*/
+
+/*------------------------------------------PAGE TWO------------------------------------------------------------*/
+
+  /*ARRANGE ALL THE ELEMENTS ON PAGE TWO AND FIVE*/
+  #page-two{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(2, 46%);
+    grid-template-rows: repeat(4, 23%);
+    grid-gap: 1rem;
+    padding: 1rem 0rem;
+    justify-content: center;
+    min-height: 950px;
+}
+/*ALL THE SECTIONS ON PAGE TWO SHOULD HAVE A BORDER RADIUS*/
+#page-two > section {
+    border-radius: 15px;
+}
+
+/*IMAGE ONE CONTAINER*/
+.images-one {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-color: yellow;
+    background-image: url(../images/background-main-two.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 0.7rem;
+}
+
+/*IMAGE TWO CONTAINER*/
+.images-two {
+    grid-column: 2/3;
+    grid-row: 3/5;
+    background-image: url(../images/main-image-two.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+/*CONTENT ONE CONTAINER*/
+.content-one{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    background-color:  rgb(21, 21, 21);
+    position: relative;
+}
+
+/*CONTENT TWO CONTAINER*/
+.content-two{
+    grid-column: 1/2;
+    grid-row: 3/5;
+    background-color:  rgb(21, 21, 21);
+    position: relative;
+}
+
+/*THE LOGO THAT APPEAR IN CONTENT ONE*/
+.logo-in-content-one {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: red;
+    font-size: 0.9rem;
+
+}
+
+/*CONTENT CONTAINER*/
+.content {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+/*STYLE THE PARAGRAPHS*/
+.content .paragraphs {
+    columns: 2;
+    font-size: 12px;
+    
+}
+
+/*STYLE THE HEADINGS FOR THE CONTENT*/
+.content-heading {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Mandali', sans-serif;
+}
+
+/*THE LAST PARAGRAPH SHOULD HAVE A SLIGH MARGIN ON TOP TO SEPARATE IT FROM THE PARAGRAPH ABOVE IT*/
+.paragraphs:last-child{
+    margin-top: 1rem;
+}
+
+/*THE ABANDONED ARTICLE SHOULD BE PLACED HIGHER UP AS IT IS LONGER AND HAS TWO PARAGRAPHS*/
+.abandoned {
+    position: absolute;
+    left: 1rem;
+    bottom: 0.5rem;
+    display: inline-block;
+    width: auto;
+}
+
+
+/*-------------------------------------------------END OF PAGE TWO----------------------------------------------------------*/
+
+
+/*------------------------------------------------PAGE THREE---------------------------------------------------------------*/
+/*ARRANGE ALL THE ELEMENTS ON PAGE THREE*/
+#page-three{
+    height: 60vh;
+    width: 95%;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-row-gap: 1%;
+    grid-column-gap: 1%;
+    place-content: center;
+    
+}
+
+/*STYLE THE ARTICLES ON PAGE THREE, THESE ARE COMMON STYLES THEY SHARE*/
+.young-criminal, .facebook-rapist, .convicted-murderer{
+    grid-column: 1/4;
+    background-color: rgb(21, 21, 21);
+    border-radius: 15px;
+    position: relative;
+}
+/*STYLE EACH ARTICLE WITH ITS UNIQUE STYLES*/
+.young-criminal{
+    grid-row: 1/2;
+}
+.facebook-rapist{
+    grid-row: 2/3;
+}
+.convicted-murderer{
+    grid-row: 3/4;
+}
+
+
+
+/*STYLE THE MAIN IMAGES SECTION*/
+.page-three-main-images{
+    grid-column: 4/6;
+    grid-row: 1/4;
+    border-radius: 15px;
+    background-image: url(../images/nomfundo-thyulu.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+
+/*------------------------------------------------END OF PAGE THREE---------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------PAGE FOUR STYLES-----------------------------------------------------------------------------------------------------------*/
+/* ARRANGE THE ELEMENTS ON PAGE FOUR */
+#page-four{
+    min-height: 120vh;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* STYLE THE ARTICLES ON PAGE FOUR */
+.main-escape-content{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-row-gap: 2%;
+    grid-column-gap: 1.5%;
+    grid-template-columns: repeat(2, 49%);
+    grid-template-rows: repeat(3, 33%);
+    /* Center the content vertically and horizontally */
+    place-content: center;
+    /* Add margin at the bottom */
+    margin-bottom: 2rem;
+}
+
+/*MAKE SURE EACH FIGURE IS SET TO RELATIVE SO THAT THE CAPTIONS CAN BE PLACED ACCORDINGLY*/
+.main-escape-content > figure{
+    position: relative;
+}
+
+/* STYLE EACH ARTICLE CONTAINER */
+.main-escape-content > article{
+    background-color: rgb(21, 21, 21);
+    position: relative;
+}
+
+/*STYLE THE IMAGE CONTAINERS IN THE ESCAPE SECTION*/
+.escape-image-one{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: aqua;
+    border-radius: 15px;
+    background-image: url(../images/burnt-bester.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.escape-image-two{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: aqua;
+    border-radius: 15px;
+    background-image: url(../images/bester-escape.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.escape-image-three{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-color: aqua;
+    border-radius: 15px;
+    background-image: url(../images/escape-victim.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*STYLE THE ARTICLE CONTAINERS IN THE ESCAPE SECTION*/
+.escape-article-one{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+
+.escape-article-two{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+.escape-article-three{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+/*----------------------------------------END OF PAGE FOUR STYLING------------------------------------------------------*/
+/*--------------------------------------- ASIDE SECTION BETWEEN PAGE FOUR AND FIVE-------------------------------------*/
+/*STYLE THE IMAGE CONTAINER, IT WILL BE OF FIXED HEIGHT*/
+.participants-images {
+    height: 220px;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: thin; /* New property */
+  }
+ /*STYLE THE SCROLLBAR MAKE THE BACKGROUND TRANSPARENT*/
+  .participants-images::-webkit-scrollbar {
+    width: 8px; 
+    background-color: transparent; 
+  }
+   /*STYLE THE SCROLLBAR ITSELF*/
+  
+  .participants-images::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px; 
+  }
+   /*CHANGE THE COLOR OF THE SCROLLBAR UPON HOVER*/
+  .participants-images::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Change the color on hover if desired */
+  }
+
+ /*STYLE EACH FIGURE CONTAINER, IT WILL HAVE A FIXED HEIGHT AND WIDTH AND WILL NEITHER SHRINK NOR GROW*/
+.participants-images > figure {
+    flex: 0 0 320px;
+    height: 200px;
+    white-space: normal;
+    border-radius: 15px;
+    position: relative;
+}
+/*STYLE EACH IMAGE*/
+.participants-images > figure > img {
+   height: 100%;
+   width: 100%;
+   border-radius: 15px;
+   position: relative;
+   filter: brightness(60%);
+}
+
+
+  /*ADD A BLACK GRADIENT TO THE BOTTOM OF EACH IMAGE TO ACCOMODATE THE CAPTIONS*/
+  .participants-images > figure > img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    pointer-events: none;
+  }
+  
+
+
+
+
+/*--------------------------------------------------------END ASIDE SECTION BETWEEEN FOUR AND FIVE STYLES----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------PAGE FIVE STYLES---------------------------------------------------------------------------*/
+/*ARRANGE ALL THE CONTENT ON PAGE FIVE*/
+#page-five{
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(2, 46%);
+    grid-template-rows: repeat(4, 23%);
+    grid-gap: 1rem;
+    padding: 1rem 0rem;
+    justify-content: center;
+    min-height: 950px;
+
+}
+/*STYLE THE SECTIONS ON PAGE FIVE*/
+#page-five > section{
+    border-radius: 15px;
+}
+/*STYLE THE FIRST IMAGE CONTAINER */
+.page-five-images-one{
+    background-color: rgb(21, 21, 21);
+    grid-row: 1/3;
+    grid-column: 1/2;
+    position: relative;
+    background-image: url(../images/nandipha-profiled.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*STYLE THE TWO CONTENT CONTAINERS*/
+.page-five-content-one{
+    background-color: rgb(21, 21, 21);
+    grid-row: 1/3;
+    grid-column: 2/3;
+    position: relative;
+}
+.page-five-content-two{
+    background-color: rgb(21, 21, 21);
+    grid-row: 3/5;
+    grid-column: 1/2;
+    position: relative;
+}
+/*STYLE THE VIDE0 CONTAINER*/
+.page-five-images-two{
+    background-color: rgb(21, 21, 21);
+    grid-row: 3/5;
+    grid-column: 2/3;
+    position: relative;
+}
+/*STYLE THE BACKGROUND VIDEO*/
+.background-video{
+   height: 100%;
+   width: 100%;
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: cover;
+   border-radius: 15px;
+}
+/*PLACE THE VIDEO CAPTION ON TOP SO IT DOSENT INTERRUPT THE CONTROLS*/
+.page-five-images-two > .video-caption{
+    position: absolute;
+    top:1rem;
+}
+
+
+
+
+/*-----------------------------------------------------------------------END OF PAGE FIVE STYLES--------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------PAGE SIX STYLES--------------------------------------------------------------------*/
+
+/*ARRANGE ALL THE CONTENT ON PAGE SIX*/
+#page-six{
+    width: 95%;
+    height: 70vh;
+    background-color: green;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/page-six.jfif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*ARRANGE ALL THE CONTENT ON THE FORM*/
+.form-container{
+    align-self: center;
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    justify-content: center;
+    background-image: url(../images/form.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 10px 10px 10px #000;
+    text-align: center;
+    border-radius: 15px;
+}
+/*STYLE THE FORM HEADING*/
+.form-container h2{
+font-family: 'Varela Round', sans-serif;
+margin-bottom: 0.5rem;
+text-align: center;
+}
+
+/*ASTYLE THE FORM FIELDS*/
+.fields{
+    border: 0px;
+    background-color: inherit;
+    font-family: inherit;
+    border-bottom: 2px solid gainsboro;
+    width:100px;
+}
+
+
+/*STYLE THE FORM BUTTON*/
+.form-container > button{
+    display: inline-block;
+    background-color: #000;
+    color: rgb(127, 127, 127);
+    font-family: 'Varela Round', sans-serif;
+    padding: 0.5rem;
+    border: 2px solid black;
+    width: 100px;
+    height: 40px;
+    
+}
+
+.button-container{
+    background-color: aliceblue;
+    height: 30%;
+    width: 20%;
+}
+
+/*----------------------------------END OF PAGE SIX STYLES-----------------------------------------*/
+
+/*------------------------------------------------STYLES TO BE APPLIED MULTIPLE TIMES--------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*THE CAPTIONS FOR ALL THE IMAGES*/
+.image-caption {
+    position: absolute;
+    bottom: 1rem;
+    margin: 0.5rem;
+    color: white;
+    font-size: 13px;
+    text-shadow: 0.5px 0.5px black;
+}
+
+/*STYLE THE ARTICLE CONTAINERS*/
+.article-heading-and-content-container{
+    position: absolute;
+    left: 1rem;
+    bottom: 0.5rem;
+    display: inline-block;
+    width: auto;
+}
+
+/*STYLE THE ARTICLE HEADINGS*/
+.article-heading{
+    font-size: var(--MAIN-FONT-SIZE);
+    color: red;
+    margin-bottom: 0.5rem;
+    font-family: var(--MAIN-FONT);
+    font-weight: 100;
+  }
+
+/*STYLE THE ARTICLE CONTENT*/
+  .article-heading-and-content-container > .article-content{
+      display: inline-block;
+      width: auto;
+      font-size: 12px;
+      color: rgb(255, 255, 255);
+  }
+
+  /*THE LOGO THAT APPEAR IN CONTENT ONE*/
+.logo-in-content-one {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: red;
+    font-size: 0.9rem;
+
+}
+
+/*CONTENT CONTAINER*/
+.content {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    color: rgb(255, 255, 255);
+}
+
+/*STYLE THE PARAGRAPHS*/
+.content .paragraphs {
+    columns: 2;
+    font-size: 12px;
+    
+}
+
+/*STYLE THE HEADINGS FOR THE CONTENT*/
+.content-heading {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-family: 'Mandali', sans-serif;
+}
+
+/*THE LAST PARAGRAPH SHOULD HAVE A SLIGH MARGIN ON TOP TO SEPARATE IT FROM THE PARAGRAPH ABOVE IT*/
+.content > .paragraphs:last-child{
+    margin-top: 1rem;
+}
+
+/*THE ABANDONED ARTICLE SHOULD BE PLACED HIGHER UP AS IT IS LONGER AND HAS TWO PARAGRAPHS*/
+.abandoned {
+    position: absolute;
+    left: 1rem;
+    bottom: 0.5rem;
+    display: inline-block;
+    width: auto;
+}
+
+
+
+ 
+/*-----------------------------------------------------------------------------------------------END OF STLYES TO BE APPLIED MULTIPLE TIMES----------------------------------------------------*/
+
+/*-------------------------------------------------MEIDA QUERIES(ARRANGED IN TERMS OF WIDTH, FROM LARGEST TO SMALLEST------------------------------------------------------------*/
+
+/*FOR SCREENS 1600PX AND BELOW*/
+@media screen and (max-width: 1200px) {
+   #page-three{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-gap: 1%;
+   }
+    .young-criminal{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    }
+    .facebook-rapist{
+      grid-column: 2/3;
+      grid-row: 1/3;
+    }
+    .convicted-murderer{
+    grid-column:1/2 ;
+    grid-row: 3/5;
+    }
+    .page-three-main-images{
+    grid-column:2/3 ;
+    grid-row: 3/5;
+    }
+
+
+}
+/*FOR SCREENS 960PX AND BELOW*/
+@media screen and (max-width: 960px ) {
+/*HIDE THE NAVIGATION BAR AND DISPLAY THE DROP-DOWN MENU INSTEAD FOR ALL SCREENS 950PX AND LESS*/
+    nav {
+        display: none;
+    }
+    .drop-down-menu {
+        display: flex;
+    }
+
+    #page-two, #page-five{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 250vh;
+    }
+
+    #page-two  > section, #page-five > section {
+    width: 95%;
+    height: 25%;
+   }
+
+   #page-three{
+    height: 80vh;
+    grid-gap: 2%;
+   }
+
+   .main-escape-content{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6,1fr);
+    gap: 0.5rem;
+    flex-direction: column;
+    min-height: 1900px;
+    margin-bottom: 0.5rem;
+   }
+   .escape-image-one{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.escape-image-two{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.escape-image-three{
+    grid-column: 1/2;
+    grid-row: 5/6;
+}
+
+.escape-article-one{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+.escape-article-two{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+.escape-article-three{
+    grid-column: 1/2;
+    grid-row: 6/7;
+    background-color: aqua;
+    border-radius: 15px;
+}
+#page-five > .page-five-images-two{
+    max-height: 500px;
+}
+.background-video{
+    max-height: 500px;
+}
+
+
+}
+
+/*FOR SCREENS 877PX AND BELOW*/
+@media screen and (max-width: 877px ) {
+    #page-three{
+        height: 100vh;
+    }
+
+    
+    }
+
+
+/*FOR SCREENS 750PX AND BELOW*/
+@media screen and (max-width: 750px) {
+    .slide-show-page-one{
+        bottom: 2rem;
+    }
+
+    #page-two{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 250vh;
+    }
+
+    #page-two > section, #page-five > section {
+    width: 95%;
+    height: 50%;
+   }
+
+  
+}
+
+
+
+/*FOR SCREENS 680PX AND BELOW*/
+@media screen and (max-width: 680px) {
+    .content .paragraphs{
+        column-count: 1;
+    }
+   
+    
+}
+
+/*FOR SCREENS 650PX AND BELOW*/
+@media screen and (max-width: 650px) {
+    #page-three {
+        height: 170vh;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    #page-three > article{
+        width: 100%;
+        height: 24.5%;
+    }
+    .page-three-main-images{
+        width: 100%;
+        height: 24.5%;
+    }
+
+
+
+
+
+/*FOR SCREENS 550PX AND BELOW*/
+@media screen and (max-width: 550px) {
+    .slide-show-page-one{
+        bottom: 1.5rem;
+    }
+    .content .paragraphs{
+        column-count: 1;
+    }  
+}
+
+/*SPECIAL CONSIDERATION FOR SCREENS WITH SHAORT HEIGHT AND WIDTH*/
+@media screen and (max-width:500px) and (max-height:500px) {
+    body > #page-two{
+        height: 2000px;
+    }
+
+    body > #page-three{
+        height: 2000px;
+    }
+
+    body > #page-four{
+        height: 3500px;
+    }
+    
+    body > #page-five{
+        height: 2000px;
+    }
+    
+    body > #page-six{
+        height: 500px;
+    }
+}
+
+
+}
+
+/*FOR SCREENS 460PX AND BELOW*/
+@media screen and (max-width: 460px) {
+    .slide-show-page-one{
+        display: none;
+    }  
+    .main-escape-content{
+        min-height: 3000px;
+    }
+
+
+}
+
+/*FOR SCREENS 385PX AND BELOW*/
+@media screen and (max-width: 385px) {
+    .content{
+        bottom: 1.5rem;
+    }
+}
+
+/*SPECIAL CONSIDERATIONS FOR THE IPHONE SE*/
+@media  screen and (max-width :376px) and (max-height:668px) {
+    .page-one-main .text-content {
+        font-size: 1rem;
+    }
+    .text-content article {
+        font-size: 0.8rem;
+        color: rgb(195, 195, 195);
+    
+    }
+}
+
+/*FOR SCREENS 300 PIXELS AND BELOW*/
+@media screen and (max-width: 300px){
+    #page-three{
+        min-height:2000px
+    }
+    body > #page-six{
+        height: 500px;
+    }
+}
+/*FOR SCREENS 295 PIXELS AND BELOW*/
+@media screen and (max-width: 295px) {
+   .main-escape-content{
+    min-height: 3500px;
+   }
+   #page-two, #page-five{
+    height: 2000px;
+   }
+}
+ /*FOR SCREENS 255 PIXELS AND BELOW*/
+@media screen and (max-width: 255px) {
+   .main-escape-content{
+    min-height: 4000px;
+   }
+}
+
+
+
+/*LANDSCAPE*/
+@media screen and (max-device-width: 1024px) and (orientation: landscape) {
+    .slide-show-page-one{
+        display: none;
+    }
+    .drop-down-menu{
+        width: 4%;
+    }
+    .caption{
+        font-size: 1rem;
+    }
+    .heading-on-page-one{
+        font-size: 1rem ;
+    }
+    .text-content article {
+        font-size: 0.7rem;
+    }
+    .content .paragraphs{
+        font-size: 0.7rem;
+    }
+    #page-three{
+        min-height: 600px;
+    }
+
+    .main-escape-content{
+        min-height: 1900px;
+    }
+    #page-four{
+        gap:0.7%
+    }
+    body > #page-six{
+        height: 500px;
+    }
+
+
+
+}
+
+/*SPECIAL CONSIDERATIONS FOR THE GALAZY FOLD- AS WELL AS VERTICALLY SHORT DISPLAYS*/
+@media  screen and (max-height: 620px){
+    
+    .slide-show-page-one{
+        display: none;
+    }
+    .article-container > .article-content{
+        font-size: 0.4rem;
+    }
+    #page-three{
+        min-height: 600px;
+    }
+
+    .main-escape-content{
+        min-height: 1900px;
+    }
+    #page-four{
+        gap:0.7%
+    }
+    body > #page-six{
+        height: 500px;
+    }
+   
+}
+
+
+
+/*--------------------------------------------------------------END OF MEDIA QUERIES---------------------------------------------------------------------------*/
+
+
+
+
+/* .drop-down-menu:hover ~ nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.drop-down-menu:hover~ nav ul{
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    position: absolute;
+    top: 3.5rem; 
+    right: 3.7vw;
+
+}
+
+.drop-down-menu:hover ~ nav ul li{
+    display: block; 
+    width: 90vw;
+    background-color: rgb(61, 59, 59, 0.8);
+    
+}
+
+.drop-down-menu:hover div{
+    display: none;
+}
+
+.drop-down-menu:hover{
+    background-image: url(../images/menu-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+} 
+*/
+
+
